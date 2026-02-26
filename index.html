@@ -4,20 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Victoria Twumasi-Ankrah | Operations & Technology Analytics Portfolio</title>
+
   <style>
     :root {
-      --bg: #f4f6f8;
-      --panel: #ffffff;
-      --card: #ffffff;
-      --text: #111827;
-      --muted: #6b7280;
-      --accent: #2563eb;
-      --accent2:#059669;
-      --border: #e5e7eb;
-      --shadow: 0 6px 18px rgba(0,0,0,0.08);
+      --bg: #0f1115;
+      --panel: #171a21;
+      --card: #1c1f26;
+      --text: #f3f4f6;
+      --muted: #9ca3af;
+      --accent: #3b82f6;
+      --accent2: #10b981;
+      --border: #2a2f3a;
+      --shadow: 0 6px 20px rgba(0,0,0,0.45);
       --radius: 12px;
       --maxw: 1100px;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
       --sans: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
 
@@ -34,25 +35,21 @@
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 28px 18px 70px; }
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 28px 18px 70px;
+    }
 
     header {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 18px;
-      padding: 22px;
       background: var(--panel);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
+      padding: 22px;
     }
 
-    header:before { content: none; }
-
     .hero {
-      position: relative;
       display: grid;
       gap: 12px;
     }
@@ -64,10 +61,10 @@
       padding: 8px 12px;
       border: 1px solid var(--border);
       border-radius: 999px;
-      background: #f9fafb;
-      width: fit-content;
+      background: #1f2430;
       color: var(--muted);
       font-size: 13px;
+      width: fit-content;
     }
 
     .tag span {
@@ -76,36 +73,55 @@
       padding: 3px 8px;
       border-radius: 999px;
       border: 1px solid var(--border);
-      background: #ffffff;
+      background: #262c3a;
       color: var(--text);
     }
 
-    h1 { margin: 0; font-size: 34px; letter-spacing: -0.02em; }
-    .subtitle { margin: 0; color: var(--muted); font-size: 16px; max-width: 78ch; }
+    h1 {
+      margin: 0;
+      font-size: 34px;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
 
-    .btnrow { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 78ch;
+    }
+
+    .btnrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
 
     .btn {
       display: inline-flex;
       align-items: center;
       gap: 10px;
       padding: 10px 14px;
-      border-radius: 12px;
+      border-radius: 8px;
       border: 1px solid var(--border);
-      background: #ffffff;
+      background: var(--card);
       color: var(--text);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      box-shadow: var(--shadow);
       font-weight: 600;
       font-size: 14px;
     }
 
     .btn.primary {
       background: var(--accent);
-      color: #ffffff;
-      border-color: rgba(37,99,235,0.25);
+      color: white;
+      border: none;
     }
 
-    .btn small { color: rgba(255,255,255,0.85); font-weight: 700; }
+    .btn small {
+      color: rgba(255,255,255,0.85);
+      font-weight: 700;
+    }
 
     .grid {
       display: grid;
@@ -126,8 +142,16 @@
       padding: 18px;
     }
 
-    .card h2 { margin: 0 0 10px; font-size: 18px; letter-spacing: -0.01em; }
-    .card p { margin: 8px 0; color: var(--muted); }
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: white;
+    }
+
+    .card p {
+      margin: 8px 0;
+      color: var(--muted);
+    }
 
     .list {
       margin: 10px 0 0;
@@ -135,7 +159,12 @@
       color: var(--muted);
     }
 
-    .pillrow { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .pillrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
 
     .pill {
       font-family: var(--mono);
@@ -143,26 +172,29 @@
       padding: 7px 10px;
       border-radius: 999px;
       border: 1px solid var(--border);
-      background: #f3f4f6;
-      color: var(--text);
-      white-space: nowrap;
+      background: #262c3a;
+      color: white;
     }
 
     .sectiontitle {
       margin: 24px 0 10px;
       font-size: 16px;
-      color: var(--text);
-      letter-spacing: -0.01em;
+      color: white;
     }
 
     .embedwrap {
       border-radius: 12px;
       overflow: hidden;
       border: 1px solid var(--border);
-      background: #ffffff;
+      background: black;
     }
 
-    iframe { width: 100%; height: 620px; border: 0; display: block; }
+    iframe {
+      width: 100%;
+      height: 620px;
+      border: 0;
+      display: block;
+    }
 
     .note {
       font-size: 13px;
@@ -187,15 +219,24 @@
       gap: 12px;
     }
 
-    .kpi .mini {
+    .mini {
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 10px;
       padding: 12px;
-      background: #f9fafb;
+      background: #262c3a;
     }
 
-    .mini .label { font-size: 12px; color: var(--muted); }
-    .mini .value { font-size: 14px; margin-top: 6px; font-weight: 700; color: var(--text); }
+    .mini .label {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .mini .value {
+      font-size: 14px;
+      margin-top: 6px;
+      font-weight: 700;
+      color: white;
+    }
 
     footer {
       margin-top: 28px;
@@ -207,155 +248,70 @@
 
     .muted { color: var(--muted); }
     .hr { height: 1px; background: var(--border); margin: 14px 0; }
+
   </style>
 </head>
 
 <body>
-  <div class="wrap">
-    <header>
-      <div class="hero">
-        <div class="tag">
-          <span>Portfolio</span>
-          Operations Analysis • Business Performance • Incident Analytics
-        </div>
+<div class="wrap">
 
-        <h1>Victoria Twumasi-Ankrah — Operations &amp; Technology Analytics</h1>
-        <p class="subtitle">
-          This portfolio highlights Microsoft Excel dashboarding and business performance analysis using
-          a realistic, de-identified incident management dataset (operations + financial variance).
-        </p>
+<header>
+<div class="hero">
 
-        <div class="btnrow">
-          <a class="btn primary" href="https://raw.githubusercontent.com/twumasiankrahvictoria-source/portfolio/main/V%20Twumasi-Ankrah%20Resume%202026.pdf" target="_blank" rel="noreferrer">
-            View Resume <small>PDF</small>
-          </a>
-          <a class="btn" href="https://github.com/twumasiankrahvictoria-source" target="_blank" rel="noreferrer">
-            GitHub
-          </a>
-          <a class="btn" href="https://raw.githubusercontent.com/twumasiankrahvictoria-source/portfolio/main/Incident%20Operations%20Cost%20Analytics%20Dashboard.xlsx" target="_blank" rel="noreferrer">
-            Download Excel (.xlsx)
-          </a>
-        </div>
-      </div>
-    </header>
+<div class="tag">
+<span>Portfolio</span>
+Operations Analysis • Business Performance • Incident Analytics
+</div>
 
-    <div class="grid">
-      <div class="card">
-        <h2>Featured Project — Incident Cost Variance &amp; Performance Dashboard (Excel)</h2>
-        <p>
-          Executive dashboard that tracks incident volume, SLA performance, operational drivers (system/root cause),
-          and financial performance (estimated vs actual cost + variance trends).
-        </p>
+<h1>Victoria Twumasi-Ankrah — Operations & Technology Analytics</h1>
 
-        <div class="pillrow">
-          <span class="pill">Excel Tables</span>
-          <span class="pill">PivotTables</span>
-          <span class="pill">PivotCharts</span>
-          <span class="pill">Slicers</span>
-          <span class="pill">KPI Cards</span>
-          <span class="pill">Variance Analysis</span>
-          <span class="pill">Root Cause Analysis</span>
-          <span class="pill">SLA Compliance</span>
-        </div>
+<p class="subtitle">
+Microsoft Excel dashboards and business performance analysis using a realistic enterprise-style incident management dataset with financial variance tracking.
+</p>
 
-        <div class="hr"></div>
+<div class="btnrow">
 
-        <h3 class="sectiontitle">What this demonstrates</h3>
-        <ul class="list">
-          <li>Building de-identified operational datasets that still feel realistic and enterprise-ready.</li>
-          <li>KPI definition and executive reporting: SLA compliance, open workload, resolution performance.</li>
-          <li>Financial performance: estimated vs actual cost tracking and budget variance monitoring.</li>
-          <li>Root cause and system driver analysis to identify where to focus process or technology improvements.</li>
-          <li>Interactive dashboarding with slicers for fast self-service filtering.</li>
-        </ul>
+<a class="btn primary"
+href="https://raw.githubusercontent.com/twumasiankrahvictoria-source/portfolio/main/V%20Twumasi-Ankrah%20Resume%202026.pdf"
+target="_blank">
+View Resume <small>PDF</small>
+</a>
 
-        <p class="note">
-          Note: Data is simulated/de-identified for portfolio purposes; dashboard design and logic mirror real-world operations reporting.
-        </p>
-      </div>
+<a class="btn"
+href="https://github.com/twumasiankrahvictoria-source"
+target="_blank">
+GitHub
+</a>
 
-      <div class="card">
-        <h2>Quick Project Summary</h2>
-        <div class="kpi">
-          <div class="mini">
-            <div class="label">Dataset Type</div>
-            <div class="value">Incident Operations + Financials</div>
-          </div>
-          <div class="mini">
-            <div class="label">Primary Metrics</div>
-            <div class="value">SLA %, Cost Variance, Volume</div>
-          </div>
-          <div class="mini">
-            <div class="label">Audience</div>
-            <div class="value">Managers &amp; Exec Stakeholders</div>
-          </div>
-          <div class="mini">
-            <div class="label">Tools</div>
-            <div class="value">Excel + OneDrive/SharePoint Embed</div>
-          </div>
-        </div>
+<a class="btn"
+href="https://raw.githubusercontent.com/twumasiankrahvictoria-source/portfolio/main/Incident%20Operations%20Cost%20Analytics%20Dashboard.xlsx"
+target="_blank">
+Download Excel (.xlsx)
+</a>
 
-        <div class="hr"></div>
+</div>
+</div>
+</header>
 
-        <h3 class="sectiontitle">Highlight</h3>
-        <p class="muted">
-          Built an interactive Excel executive dashboard for incident operations, integrating SLA performance,
-          root-cause drivers, and estimated vs actual financial impact with variance trending using PivotTables,
-          PivotCharts, and slicers.
-        </p>
+<div class="card" style="margin-top:18px;">
 
-        <div class="hr"></div>
+<h2>Live Dashboard (Embedded Excel)</h2>
 
-        <h3 class="sectiontitle">How to use the dashboard</h3>
-        <ul class="list">
-          <li>Use slicers to filter by System, Priority, Region, Analyst, and Status.</li>
-          <li>Review Estimated vs Actual cost trend to assess forecasting quality.</li>
-          <li>Use variance chart (red/green) to identify months with overruns vs savings.</li>
-          <li>Use root cause chart to prioritize improvements (training, config, bugs, process gaps).</li>
-        </ul>
-      </div>
-    </div>
+<div class="embedwrap">
 
-    <div class="card" style="margin-top:18px;">
-      <h2>Live Dashboard (Embedded Excel)</h2>
+<iframe
+src="https://westerngovernorsuniversity-my.sharepoint.com/personal/vtwumas_wgu_edu/_layouts/15/Doc.aspx?sourcedoc={005852ab-2c7a-46f3-8e6c-b01a97398765}&action=embedview&wdAllowInteractivity=True&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True"
+loading="lazy">
+</iframe>
 
-      <div class="embedwrap">
-        <iframe
-          src="https://westerngovernorsuniversity-my.sharepoint.com/personal/vtwumas_wgu_edu/_layouts/15/Doc.aspx?sourcedoc={005852ab-2c7a-46f3-8e6c-b01a97398765}&action=embedview&wdAllowInteractivity=True&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True"
-          loading="lazy"
-          title="Incident Cost Variance Dashboard - Excel Embed">
-        </iframe>
-      </div>
+</div>
 
+</div>
 
-    <div class="two">
-      <div class="card">
-        <h2>Project Walkthrough</h2>
-        <ul class="list">
-          <li>Designed incident table with realistic statuses, SLAs, and resolution times.</li>
-          <li>Built lookup tables for Systems, Regions, Analysts, and Root Cause categories.</li>
-          <li>Created executive KPIs and PivotCharts with slicers for interactive exploration.</li>
-          <li>Added estimated vs actual cost tracking and variance visualization (over/under budget).</li>
-        </ul>
-      </div>
+<footer>
+Contact: twumasiankrah.victoria@gmail.com • Lawrenceville, GA
+</footer>
 
-      <div class="card">
-        <h2>Artifacts </h2>
-        <ul class="list">
-          <li><a href="REPLACE_WITH_PPTX_LINK" target="_blank" rel="noreferrer">Executive Summary Slides (PowerPoint)</a></li>
-          <li><a href="REPLACE_WITH_DOCX_LINK" target="_blank" rel="noreferrer">Performance Summary (Word)</a></li>
-          <li><a href="REPLACE_WITH_PDF_LINK" target="_blank" rel="noreferrer">Portfolio Overview PDF</a></li>
-          <li><a href="REPLACE_WITH_SCREENSHOT_IMAGE_LINK" target="_blank" rel="noreferrer">Dashboard Screenshot (PNG)</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <footer>
-      <div><strong class="muted">Contact:</strong> twumasiankrah.victoria@gmail.com • Lawrenceville, GA</div>
-      <div style="margin-top:6px;">
-        <span class="muted">Keywords:</span> Excel, PivotTables, KPI dashboards, SLA tracking, incident management, variance analysis, operations analytics
-      </div>
-    </footer>
-  </div>
+</div>
 </body>
 </html>
